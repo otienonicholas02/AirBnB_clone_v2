@@ -68,8 +68,7 @@ class FileStorage:
             pass
 
     def delete(self, obj=None):
-        """ delete an existing element
-        """
+        """ Delete a given object from __objects, if it exists."""
         if obj:
             key = "{}.{}".format(type(obj).__name__, obj.id)
             del self.__objects[key]
