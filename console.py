@@ -170,6 +170,11 @@ class HBNBCommand(cmd.Cmd):
         except KeyError:
             print("** no instance found **")
 
+        except SyntaxError:
+            print("** class name missing **")
+        except NameError:
+            print("** class doesn't exist **")
+
     def help_show(self):
         """ Help information for the show command """
         print("Shows an individual instance of a class")
@@ -330,5 +335,12 @@ class HBNBCommand(cmd.Cmd):
         """ Help information for the update class """
         print("Updates an object with new information")
         print("Usage: update <className> <id> <attName> <attVal>\n")
+<<<<<<< HEAD
         if __name__ == "__main__":
             HBNBCommand().cmdloop()
+=======
+
+
+if __name__ == "__main__":
+    HBNBCommand().cmdloop()
+>>>>>>> 06423a3f00795c29aa0361f7ed5bc9bb899543e4
