@@ -11,10 +11,12 @@ from models.review import Review
 class User(BaseModel, Base):
     """This is the class for user
     Attributes:
-        email: email address
-        password: password for you login
-        first_name: first name
-        last_name: last name
+        email: The User's  email address
+        password: The User's password
+        first_name: The User's first name
+        last_name: The User's last name
+        place: the user-place relationship
+        reviews: The User-Review relationship
     """
     __tablename__ = "users"
     email = Column(String(128), nullable=False)
